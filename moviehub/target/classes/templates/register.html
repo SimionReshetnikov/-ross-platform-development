@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">MovieHub</div>
+    <nav class="nav">
+        <a href="/">Главная</a>
+        <a href="/register">Регистрация</a>
+    </nav>
+</header>
+
+<main class="main">
+    <div class="form-container">
+        <h2>Регистрация</h2>
+
+        <form action="/register" method="post" th:object="${user}">
+            <label for="name">Имя:</label><br>
+            <input type="text" id="name" th:field="*{name}">
+            <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" th:field="*{email}">
+            <p class="error" th:errors="*{email}"></p>
+            <p class="error" th:if="${emailError}" th:text="${emailError}"></p>
+
+            <label for="password">Пароль:</label><br>
+            <input type="password" id="password" th:field="*{password}">
+            <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+
+        <p style="margin-top: 15px;">
+            Уже есть аккаунт?
+            <a href="/login">Войти</a>
+        </p>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>MovieHub 2026</p>
+</footer>
+
+</body>
+</html>

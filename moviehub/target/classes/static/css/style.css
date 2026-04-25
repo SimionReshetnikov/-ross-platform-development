@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color:#fff;
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    background: #1c1c1c;
+}
+
+.logo {
+    font-size:28px;
+    font-weight: bold;
+}
+
+.nav {
+    display:flex;
+    gap: 24px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color:#ffcc00;
+}
+
+.main {
+    padding: 60px;
+}
+
+.hero {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    min-height: calc(100vh - 80px);
+    padding:40px 20px;
+}
+
+.hero-text {
+    max-width: 400px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 24px;
+    background: #ffcc00;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-image {
+    flex: 0 0 420px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 420px;
+    display: block;
+    border-radius: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 24px;
+    background: #1c1c1c;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #1c1c1c;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+button {
+    margin-top: 10px;
+    padding: 12px;
+    background: #ffcc00;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .main {
+        padding: 30px 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .hero-image {
+        flex: none;
+        width: 100%;
+    }
+
+    .hero-image {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .form-container {
+        width: 100%;
+        max-width: 360px;
+        padding: 24px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
