@@ -29,6 +29,9 @@
 - Mockito
 - H2 (для тестирования)
 
-#Создание Dockerfile №3 (CrossPlatformingJavaTask3)
+# Создание Dockerfile №3 (CrossPlatformingJavaTask3)
 Напишите dockerfile, который создаст контейнер с любым java проектом. Вы можете использовать проект любой сложности для данного задания. 
+
+# Создание Dockerfile №4 (CrossPlatformingJavaTask4)
+Создайте docker-compose файл, который будет связывать Java проект, который содержит функции для crud операций над таблицей в бд и базу данных. Java проект должен иметь возможность связываться с бд и работать с ней.
 
