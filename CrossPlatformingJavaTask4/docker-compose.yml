@@ -1,0 +1,17 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_DATABASE: testdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: rootpasswords
+    ports:
+      - "3307:3306"
+
+  app:
+    build: .
+    container_name: java-crud-app
+    depends_on:
+      - db
